@@ -312,22 +312,31 @@ var render = function() {
                               }
                             },
                             [
-                              _c("el-card", { attrs: { shadow: "hover" } }, [
-                                _c("div", { staticClass: "text-center" }, [
-                                  _c(
-                                    "p",
-                                    {
-                                      staticStyle: {
-                                        "font-size": "36px",
-                                        color: "#1093de"
-                                      }
-                                    },
-                                    [_vm._v(_vm._s(_vm.dashboard_data.clients))]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("h5", [_vm._v("Clients")])
-                                ])
-                              ])
+                              _c(
+                                "el-card",
+                                {
+                                  staticStyle: {
+                                    background: "#1093de !important",
+                                    color: "white"
+                                  },
+                                  attrs: { shadow: "hover" }
+                                },
+                                [
+                                  _c("div", { staticClass: "text-center" }, [
+                                    _c(
+                                      "p",
+                                      { staticStyle: { "font-size": "36px" } },
+                                      [
+                                        _vm._v(
+                                          _vm._s(_vm.dashboard_data.clients)
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("h5", [_vm._v("Clients")])
+                                  ])
+                                ]
+                              )
                             ],
                             1
                           )
@@ -349,22 +358,31 @@ var render = function() {
                               }
                             },
                             [
-                              _c("el-card", { attrs: { shadow: "hover" } }, [
-                                _c("div", { staticClass: "text-center" }, [
-                                  _c(
-                                    "p",
-                                    {
-                                      staticStyle: {
-                                        "font-size": "36px",
-                                        color: "#108a3b"
-                                      }
-                                    },
-                                    [_vm._v(_vm._s(_vm.dashboard_data.active))]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("h5", [_vm._v("Active")])
-                                ])
-                              ])
+                              _c(
+                                "el-card",
+                                {
+                                  staticStyle: {
+                                    background: "#1093de !important",
+                                    color: "white"
+                                  },
+                                  attrs: { shadow: "hover" }
+                                },
+                                [
+                                  _c("div", { staticClass: "text-center" }, [
+                                    _c(
+                                      "p",
+                                      { staticStyle: { "font-size": "36px" } },
+                                      [
+                                        _vm._v(
+                                          _vm._s(_vm.dashboard_data.active)
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("h5", [_vm._v("Active")])
+                                  ])
+                                ]
+                              )
                             ],
                             1
                           )
@@ -386,26 +404,31 @@ var render = function() {
                               }
                             },
                             [
-                              _c("el-card", { attrs: { shadow: "hover" } }, [
-                                _c("div", { staticClass: "text-center" }, [
-                                  _c(
-                                    "p",
-                                    {
-                                      staticStyle: {
-                                        "font-size": "36px",
-                                        color: "#db3f26"
-                                      }
-                                    },
-                                    [
-                                      _vm._v(
-                                        _vm._s(_vm.dashboard_data.inactive)
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("h5", [_vm._v("Inactive")])
-                                ])
-                              ])
+                              _c(
+                                "el-card",
+                                {
+                                  staticStyle: {
+                                    background: "#1093de !important",
+                                    color: "white"
+                                  },
+                                  attrs: { shadow: "hover" }
+                                },
+                                [
+                                  _c("div", { staticClass: "text-center" }, [
+                                    _c(
+                                      "p",
+                                      { staticStyle: { "font-size": "36px" } },
+                                      [
+                                        _vm._v(
+                                          _vm._s(_vm.dashboard_data.inactive)
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("h5", [_vm._v("Inactive")])
+                                  ])
+                                ]
+                              )
                             ],
                             1
                           )
@@ -427,26 +450,31 @@ var render = function() {
                               }
                             },
                             [
-                              _c("el-card", { attrs: { shadow: "hover" } }, [
-                                _c("div", { staticClass: "text-center" }, [
-                                  _c(
-                                    "p",
-                                    {
-                                      staticStyle: {
-                                        "font-size": "36px",
-                                        color: "#f4a204"
-                                      }
-                                    },
-                                    [
-                                      _vm._v(
-                                        _vm._s(_vm.dashboard_data.terminated)
-                                      )
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("h5", [_vm._v("Terminated")])
-                                ])
-                              ])
+                              _c(
+                                "el-card",
+                                {
+                                  staticStyle: {
+                                    background: "#1093de !important",
+                                    color: "white"
+                                  },
+                                  attrs: { shadow: "hover" }
+                                },
+                                [
+                                  _c("div", { staticClass: "text-center" }, [
+                                    _c(
+                                      "p",
+                                      { staticStyle: { "font-size": "36px" } },
+                                      [
+                                        _vm._v(
+                                          _vm._s(_vm.dashboard_data.terminated)
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("h5", [_vm._v("Terminated")])
+                                  ])
+                                ]
+                              )
                             ],
                             1
                           )
@@ -457,28 +485,38 @@ var render = function() {
                         "el-col",
                         { attrs: { xs: 24, sm: 4, md: 4, lg: 4, xl: 4 } },
                         [
-                          _c("el-card", { attrs: { shadow: "hover" } }, [
-                            _c("div", [
-                              _c("strong", [
-                                _vm._v("Users "),
-                                _c(
-                                  "span",
-                                  {
-                                    staticStyle: {
-                                      float: "right",
-                                      "border-left": "1px solid",
-                                      "padding-left": "10px"
-                                    }
-                                  },
-                                  [
-                                    _vm._v(
-                                      _vm._s(_vm.dashboard_data.users) + " "
-                                    )
-                                  ]
-                                )
+                          _c(
+                            "el-card",
+                            {
+                              staticStyle: {
+                                background: "#1093de !important",
+                                color: "white"
+                              },
+                              attrs: { shadow: "hover" }
+                            },
+                            [
+                              _c("div", [
+                                _c("strong", [
+                                  _vm._v("Users "),
+                                  _c(
+                                    "span",
+                                    {
+                                      staticStyle: {
+                                        float: "right",
+                                        "border-left": "1px solid",
+                                        "padding-left": "10px"
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        _vm._s(_vm.dashboard_data.users) + " "
+                                      )
+                                    ]
+                                  )
+                                ])
                               ])
-                            ])
-                          ])
+                            ]
+                          )
                         ],
                         1
                       )

@@ -12,13 +12,12 @@
             <div class="py-12 bg-indigo-100 lg:bg-white flex justify-center lg:justify-start lg:px-12">
                 <div class="cursor-pointer flex items-center">
                     <div>
-                        <img src="/logo/logo.png" alt="" width="120">
+                        <img src="/logo/logo.png" alt="" width="200">
                     </div>
                     {{-- <div class="text-2xl text-indigo-800 tracking-wide ml-2 font-semibold">blockify</div> --}}
                 </div>
             </div>
             <div class="mt-10 px-12 sm:px-24 md:px-48 lg:px-12 lg:mt-16 xl:px-24 xl:max-w-2xl">
-                <button>Investigat</button>
                 <h2 class="text-center text-4xl font-display font-semibold lg:text-left xl:text-5xl
                     xl:text-bold"
                     style="color: #E3193A;">Log in</h2>

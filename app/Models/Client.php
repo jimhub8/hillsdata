@@ -19,9 +19,13 @@ class Client extends Authenticatable
      * @var array
      */
     protected $fillable = ['code', 'client_name', 'location', 'contact', 'engaged_date', 'renewal_date', 'status'];
-    
+
     public function getCreatedAtAttribute($date)
     {
         return Carbon::createFromFormat('Y-m-d H:i:s', Carbon::parse($date))->format('D d M Y H:i');
+    }
+    public function getStatusAttribute($status)
+    {
+        return (string) $status;
     }
 }

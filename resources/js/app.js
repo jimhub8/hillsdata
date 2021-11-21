@@ -21,7 +21,10 @@ import locale from 'element-ui/lib/locale/lang/en'
 import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.use(ElementUI, { locale });
+import Vue from "vue";
+import JsonExcel from "vue-json-excel";
 
+Vue.component("downloadExcel", JsonExcel);
 
 // import Chartkick from 'vue-chartkick'
 // import Chart from 'chart.js'

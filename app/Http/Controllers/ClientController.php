@@ -15,7 +15,22 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return Client::paginate(200);
+        $clients =  Client::paginate(200);
+        $clients->transform(function ($client) {
+            $active = '';
+            if ($client->status == 1) {
+                $active = 'Active';
+            }elseif ($client->status == 2) {
+                $active = 'Inactive';
+            }elseif ($client->status == 3) {
+                $active = 'Terminated';
+            }elseif ($client->status == 2) {
+                $active = 'Lead';
+            }
+            $client->active =$active;
+            return $client;
+        });
+        return $clients;
     }
 
     /**
@@ -37,7 +52,6 @@ class ClientController extends Controller
             'status' => 'required'
         ]);
 
-        $password = Str::random(8);
 
        return Client::create([
             'code' => $request->code,

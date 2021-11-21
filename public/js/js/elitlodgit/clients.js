@@ -198,6 +198,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
@@ -319,15 +320,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   data: function data() {
     return {
       dialog: false,
-      form: {},
-      payload: {
-        model: '/client/clients'
-      }
+      form: {}
     };
   },
   created: function created() {
@@ -492,6 +491,29 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
  // import myUpload from "./excel";
@@ -537,7 +559,16 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         text: "Actions",
         value: "actions",
         sortable: false
-      }]
+      }],
+      json_fields: {
+        'Client code': 'code',
+        'Client name': 'client_name',
+        'contact': 'contact',
+        'Location': 'location',
+        'Engagement date': 'engaged_date',
+        'Renewal date': 'renewal_date',
+        'Status': 'active'
+      }
     };
   },
   methods: (_methods = {
@@ -1442,6 +1473,21 @@ var render = function() {
                                 [_vm._v("Terminated")]
                               ),
                               _vm._v(" "),
+                              _c(
+                                "el-radio",
+                                {
+                                  attrs: { label: "4" },
+                                  model: {
+                                    value: _vm.form.status,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.form, "status", $$v)
+                                    },
+                                    expression: "form.status"
+                                  }
+                                },
+                                [_vm._v("Lead")]
+                              ),
+                              _vm._v(" "),
                               _vm.errors.company_website
                                 ? _c(
                                     "small",
@@ -1813,6 +1859,21 @@ var render = function() {
                                 [_vm._v("Terminated")]
                               ),
                               _vm._v(" "),
+                              _c(
+                                "el-radio",
+                                {
+                                  attrs: { label: "4" },
+                                  model: {
+                                    value: _vm.form.status,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.form, "status", $$v)
+                                    },
+                                    expression: "form.status"
+                                  }
+                                },
+                                [_vm._v("Lead")]
+                              ),
+                              _vm._v(" "),
                               _vm.errors.company_website
                                 ? _c(
                                     "small",
@@ -1992,6 +2053,73 @@ var render = function() {
                               ])
                             },
                             [_vm._v(" "), _c("span", [_vm._v("Refresh")])]
+                          )
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-flex",
+                        {
+                          staticStyle: { "margin-left": "10px" },
+                          attrs: { sm1: "" }
+                        },
+                        [
+                          _c(
+                            "download-excel",
+                            {
+                              attrs: {
+                                data: _vm.clients.data,
+                                fields: _vm.json_fields
+                              }
+                            },
+                            [
+                              _c(
+                                "v-tooltip",
+                                {
+                                  attrs: { right: "" },
+                                  scopedSlots: _vm._u([
+                                    {
+                                      key: "activator",
+                                      fn: function(ref) {
+                                        var on = ref.on
+                                        return [
+                                          _c(
+                                            "v-btn",
+                                            _vm._g(
+                                              {
+                                                staticClass: "mx-0",
+                                                attrs: {
+                                                  slot: "activator",
+                                                  icon: ""
+                                                },
+                                                slot: "activator"
+                                              },
+                                              on
+                                            ),
+                                            [
+                                              _c(
+                                                "v-icon",
+                                                {
+                                                  attrs: {
+                                                    color: "blue darken-2",
+                                                    small: ""
+                                                  }
+                                                },
+                                                [_vm._v("mdi-file-excel")]
+                                              )
+                                            ],
+                                            1
+                                          )
+                                        ]
+                                      }
+                                    }
+                                  ])
+                                },
+                                [_vm._v(" "), _c("span", [_vm._v("Download")])]
+                              )
+                            ],
+                            1
                           )
                         ],
                         1
@@ -2277,6 +2405,58 @@ var render = function() {
                                     _vm._v(" "),
                                     _c("span", [_vm._v("Terminated")])
                                   ]
+                                )
+                              : item.status == 3
+                              ? _c(
+                                  "v-tooltip",
+                                  {
+                                    attrs: { bottom: "" },
+                                    scopedSlots: _vm._u(
+                                      [
+                                        {
+                                          key: "activator",
+                                          fn: function(ref) {
+                                            var on = ref.on
+                                            var attrs = ref.attrs
+                                            return [
+                                              _c(
+                                                "v-btn",
+                                                _vm._g(
+                                                  _vm._b(
+                                                    { attrs: { icon: "" } },
+                                                    "v-btn",
+                                                    attrs,
+                                                    false
+                                                  ),
+                                                  on
+                                                ),
+                                                [
+                                                  _c(
+                                                    "v-icon",
+                                                    {
+                                                      attrs: {
+                                                        color: "primary",
+                                                        small: ""
+                                                      }
+                                                    },
+                                                    [
+                                                      _vm._v(
+                                                        "\n                                        mdi-target\n                                    "
+                                                      )
+                                                    ]
+                                                  )
+                                                ],
+                                                1
+                                              )
+                                            ]
+                                          }
+                                        }
+                                      ],
+                                      null,
+                                      true
+                                    )
+                                  },
+                                  [_vm._v(" "), _c("span", [_vm._v("Lead")])]
                                 )
                               : _vm._e()
                           ]

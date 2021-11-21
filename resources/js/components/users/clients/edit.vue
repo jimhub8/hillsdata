@@ -44,6 +44,7 @@
                             <el-radio v-model="form.status" label="1">Active</el-radio>
                             <el-radio v-model="form.status" label="2">Inactive</el-radio>
                             <el-radio v-model="form.status" label="3">Terminated</el-radio>
+                            <el-radio v-model="form.status" label="4">Lead</el-radio>
                             <small class="has-text-danger" v-if="errors.company_website">{{ errors.company_website[0] }}</small>
                         </v-flex>
                     </v-layout>
@@ -67,9 +68,6 @@ export default {
     data: () => ({
         dialog: false,
         form: {},
-        payload: {
-            model: '/client/clients',
-        },
     }),
     created() {
         eventBus.$on("openEditClient", data => {

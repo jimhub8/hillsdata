@@ -9,7 +9,7 @@
     <v-navigation-drawer v-model="drawer" :clipped="clipped" app>
 
         <v-list dense id="navigation">
-            <v-img :aspect-ratio="16/9" src="/storage/app/app_image.jpeg">
+            <!-- <v-img :aspect-ratio="16/9" src="/storage/app/app_image.jpeg">
                 <v-layout pa-2 column fill-height class="lightbox white--text">
                     <v-spacer></v-spacer>
                     <v-flex shrink>
@@ -17,7 +17,7 @@
                         <div class="body-1">{{ user.email }}</div>
                     </v-flex>
                 </v-layout>
-            </v-img>
+            </v-img> -->
             <template>
                 <v-card>
                     <router-link to="/" class="v-list-item v-list-item--link theme--light">
@@ -108,7 +108,7 @@
     <v-app-bar :clipped-left="clipped" app color="red darken-3" dark>
         <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
         <v-toolbar-title style="width: 300px" class="ml-0 pl-4">
-            <img src="/logo/logo.jpg" alt style="width: 90px; height: 46px;">
+            <img src="/logo/logo.png" alt style="width: 160px; height: 80px;margin-top:10px">
         </v-toolbar-title>
         <v-spacer />
         <v-spacer />
@@ -264,5 +264,8 @@ export default {
 #navigation .v-list-item--link,
 #navigation .v-list-item--link {
     width: 100% !important;
+}
+.v-sheet.v-app-bar.v-toolbar[data-v-520e3a02]:not(.v-sheet--outlined){
+        height: 83px !important;
 }
 </style>

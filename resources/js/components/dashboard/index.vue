@@ -7,9 +7,9 @@
                 <el-row :gutter="12" style="width: 100%">
                     <el-col :xs="12" :sm="5" :md="5" :lg="5" :xl="5">
                         <div @click="openPage('delivered')" style="cursor: pointer">
-                            <el-card shadow="hover">
+                            <el-card shadow="hover" style="background: #1093de !important;color: white">
                                 <div class="text-center">
-                                    <p style="font-size: 36px;color: #1093de;">{{ dashboard_data.clients }}</p>
+                                    <p style="font-size: 36px;">{{ dashboard_data.clients }}</p>
                                     <h5>Clients</h5>
                                 </div>
                             </el-card>
@@ -17,9 +17,9 @@
                     </el-col>
                     <el-col :xs="12" :sm="5" :md="5" :lg="5" :xl="5">
                         <div @click="openPage('To be shipped')" style="cursor: pointer">
-                            <el-card shadow="hover">
+                            <el-card shadow="hover" style="background: #1093de !important;color: white">
                                 <div class="text-center">
-                                    <p style="font-size: 36px;color: #108a3b;">{{ dashboard_data.active }}</p>
+                                    <p style="font-size: 36px;">{{ dashboard_data.active }}</p>
                                     <h5>Active</h5>
                                 </div>
                             </el-card>
@@ -27,9 +27,9 @@
                     </el-col>
                     <el-col :xs="12" :sm="5" :md="5" :lg="5" :xl="5">
                         <div @click="openPage('To be delivered')" style="cursor: pointer">
-                            <el-card shadow="hover">
+                            <el-card shadow="hover" style="background: #1093de !important;color: white">
                                 <div class="text-center">
-                                    <p style="font-size: 36px;color: #db3f26;">{{ dashboard_data.inactive }}</p>
+                                    <p style="font-size: 36px;">{{ dashboard_data.inactive }}</p>
                                     <h5>Inactive</h5>
                                 </div>
                             </el-card>
@@ -37,9 +37,9 @@
                     </el-col>
                     <el-col :xs="12" :sm="5" :md="5" :lg="5" :xl="5">
                         <div @click="openPage('Returned')" style="cursor: pointer">
-                            <el-card shadow="hover">
+                            <el-card shadow="hover" style="background: #1093de !important;color: white">
                                 <div class="text-center">
-                                    <p style="font-size: 36px;color: #f4a204;">{{ dashboard_data.terminated }}</p>
+                                    <p style="font-size: 36px;">{{ dashboard_data.terminated }}</p>
                                     <h5>Terminated</h5>
                                 </div>
                             </el-card>
@@ -47,7 +47,7 @@
                     </el-col>
                     <!-- <v-divider vertical></v-divider> -->
                     <el-col :xs="24" :sm="4" :md="4" :lg="4" :xl="4">
-                        <el-card shadow="hover">
+                        <el-card shadow="hover" style="background: #1093de !important;color: white">
                             <div>
                                 <strong>Users <span style="float:right;border-left: 1px solid;padding-left: 10px;">{{ dashboard_data.users  }} </span> </strong>
                             </div>

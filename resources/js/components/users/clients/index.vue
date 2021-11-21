@@ -24,6 +24,19 @@
                             <span>Refresh</span>
                         </v-tooltip>
                     </v-flex>
+
+                    <v-flex sm1 style="margin-left: 10px">
+                        <download-excel :data="clients.data" :fields="json_fields">
+                            <v-tooltip right>
+                                <template v-slot:activator="{ on }">
+                                    <v-btn icon v-on="on" slot="activator" class="mx-0">
+                                        <v-icon color="blue darken-2" small>mdi-file-excel</v-icon>
+                                    </v-btn>
+                                </template>
+                                <span>Download</span>
+                            </v-tooltip>
+                        </download-excel>
+                    </v-flex>
                     <v-flex sm2>
                         <h3 style="margin-left: 30px !important; margin-top: 10px">
                             Clients
@@ -76,6 +89,16 @@
                                 </v-btn>
                             </template>
                             <span>Terminated</span>
+                        </v-tooltip>
+                        <v-tooltip bottom v-else-if="item.status == 3">
+                            <template v-slot:activator="{ on, attrs }">
+                                <v-btn icon v-bind="attrs" v-on="on">
+                                    <v-icon color="primary" small>
+                                        mdi-target
+                                    </v-icon>
+                                </v-btn>
+                            </template>
+                            <span>Lead</span>
                         </v-tooltip>
                     </template>
                     <template v-slot:item.actions="{ item }">
@@ -165,7 +188,16 @@ export default {
                     value: "actions",
                     sortable: false
                 }
-            ]
+            ],
+            json_fields: {
+                'Client code': 'code',
+                'Client name': 'client_name',
+                'contact': 'contact',
+                'Location': 'location',
+                'Engagement date': 'engaged_date',
+                'Renewal date': 'renewal_date',
+                'Status': 'active',
+            },
         };
     },
     methods: {
