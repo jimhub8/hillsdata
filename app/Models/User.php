@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Notification;
 use Laravel\Sanctum\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
+use Spatie\WelcomeNotification\WelcomeNotification;
 
 class User extends Authenticatable
 {
@@ -66,4 +68,11 @@ class User extends Authenticatable
         return $user;
     }
 
+    public function welcome_mail($user)
+    {
+        $expiresAt = now()->addDay();
+        // $this->notify(new WelcomeNotification($expiresAt));
+
+        Notification::send($user, new WelcomeNotification($expiresAt));
+    }
 }

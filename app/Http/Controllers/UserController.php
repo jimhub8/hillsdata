@@ -61,8 +61,8 @@ class UserController extends Controller
 
         // Mail::send(new UserRegisterMail($user, $password));
 
-        // $user_mail = new User;
-        // $user_mail->welcome_mail($user);
+        $user_mail = new User;
+        $user_mail->welcome_mail($user);
 
         return $user;
     }

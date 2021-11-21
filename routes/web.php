@@ -21,7 +21,10 @@ Auth::routes();
 
 
 // guard
-// Route::group(['middleware' => ['auth', 'guard']], function () {
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('home', function () {
+        return redirect('/');
+    });
 
     Route::get('/', 'HomeController@index')->name('home');
 
@@ -29,18 +32,7 @@ Auth::routes();
     Route::resource('roles', 'RoleController');
     Route::resource('clients', 'ClientController');
     Route::resource('company', 'CompanyController');
-    Route::resource('incidences', 'IncidenceController');
-    Route::resource('incidence_documents', 'IncidenceDocumentsController');
-    Route::resource('investigations', 'InvestigationController');
-    Route::resource('divisions', 'DivisionController');
-    Route::resource('vehicle', 'VehicleController');
-    Route::resource('org', 'OrganizationController');
-    Route::resource('incident_person', 'PersonController');
 
-
-    Route::post('person_image/{id}', 'PersonController@person_image');
-    Route::post('vehicle_image/{id}', 'VehicleController@vehicle_image');
-    Route::post('org_image/{id}', 'OrganizationController@org_image');
 
 
     Route::patch('change_password/{id}', 'UserController@change_password')->name('change_password');
@@ -59,7 +51,11 @@ Auth::routes();
     Route::get('dashboard_data', 'DashboardController@dashboard_data');
 
 
-// });
+    Route::get('welcome/{user}', 'WelcomeController@showWelcomeForm')->name('welcome');
+    Route::post('welcome/{user}', 'WelcomeController@savePassword');
+
+    Route::get('wel', 'WelcomeController@wel');
+});
 
 
 

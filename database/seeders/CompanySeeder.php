@@ -16,7 +16,7 @@ class CompanySeeder extends Seeder
     {
         Company::create([
             'name' => 'Hills Data Technologies',
-            'email' => 'info@test.com',
+            'email' => 'info@hillsdatatechnologies.co.ke',
         ]);
     }
 }

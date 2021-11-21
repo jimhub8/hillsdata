@@ -52,17 +52,5 @@ class RolesAndPermissionsSeeder extends Seeder
             'remember_token' => Str::random(10)
         ]);
         $user->assignRole('Super admin');
-
-
-        $user2 = User::create([
-            'name' => 'Don Awene',
-            'email' => 'don.awene@gmail.com',
-            'email_verified_at' => now(),
-            'address' => $faker->address(),
-            'phone' => $faker->phoneNumber(),
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-            'remember_token' => Str::random(10)
-        ]);
-        $user2->assignRole('Super admin');
     }
 }

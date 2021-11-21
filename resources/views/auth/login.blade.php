@@ -46,7 +46,7 @@
                                     Password
                                 </div>
                                 <div>
-                                    <a class="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800
+                                    <a href="/forgot-password" class="text-xs font-display font-semibold text-indigo-600 hover:text-indigo-800
                                         cursor-pointer"
                                         style="color: #E3193A;">
                                         Forgot Password?
@@ -74,11 +74,6 @@
                             </button>
                         </div>
                     </form>
-                    <div class="mt-12 text-sm font-display font-semibold text-gray-700 text-center">
-                        Login as
-                        <a class="cursor-pointer text-indigo-600 hover:text-indigo-800" style="color: #E3193A;" href="/client">Client</a> <small>or </small>
-                        <a class="cursor-pointer text-indigo-600 hover:text-indigo-800" style="color: #E3193A;" href="/investigatorhome">Investigator</a>
-                    </div>
                 </div>
             </div>
         </div>
