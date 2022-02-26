@@ -5,17 +5,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>{{ config('app.name', 'Laravel') }}</title>
-    <link rel="icon"
-        href="https://elitelodgit.com/wp-content/uploads/2019/09/cropped-imageonline-co-transparentimage-11-32x32.png"
-        sizes="32x32" />
-    <link rel="icon"
-        href="https://elitelodgit.com/wp-content/uploads/2019/09/cropped-imageonline-co-transparentimage-11-192x192.png"
-        sizes="192x192" />
-    <link rel="apple-touch-icon"
-        href="https://elitelodgit.com/wp-content/uploads/2019/09/cropped-imageonline-co-transparentimage-11-180x180.png" />
-    <meta name="msapplication-TileImage"
-        content="https://elitelodgit.com/wp-content/uploads/2019/09/cropped-imageonline-co-transparentimage-11-270x270.png" />
 
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="icon" href="/logo/logo.png" sizes="32x32" />
+    <link rel="icon" href="/logo/logo.png" sizes="192x192" />
+    <link rel="apple-touch-icon" href="/logo/logo.png" />
+    <meta name="msapplication-TileImage" content="/logo/logo.png" />
+    <!-- Styles -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 

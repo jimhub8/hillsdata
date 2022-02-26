@@ -12,7 +12,7 @@ export default {
     props: ['user'],
     data() {
         return {
-            app_name: 'Elitlodgit'
+            app_name: 'Hills data'
         }
     },
     computed: {

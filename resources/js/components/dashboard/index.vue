@@ -45,7 +45,6 @@
                             </el-card>
                         </div>
                     </el-col>
-                    <!-- <v-divider vertical></v-divider> -->
                     <el-col :xs="24" :sm="4" :md="4" :lg="4" :xl="4">
                         <el-card shadow="hover" style="background: #1093de !important;color: white">
                             <div>

@@ -17,6 +17,12 @@ use Illuminate\Support\Facades\Route;
 
 // Route::group(['middleware' => ['auth']], function () {
 
+
+Route::get('welcome/{user}', 'WelcomeController@showWelcomeForm')->name('welcome');
+Route::post('welcome/{user}', 'WelcomeController@savePassword');
+
+// Route::get('wel', 'WelcomeController@wel');
+
 Auth::routes();
 
 
@@ -50,11 +56,6 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::get('dashboard_data', 'DashboardController@dashboard_data');
 
-
-    Route::get('welcome/{user}', 'WelcomeController@showWelcomeForm')->name('welcome');
-    Route::post('welcome/{user}', 'WelcomeController@savePassword');
-
-    Route::get('wel', 'WelcomeController@wel');
 });
 
 
